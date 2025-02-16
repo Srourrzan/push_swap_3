@@ -6,12 +6,16 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:11:53 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/16 21:35:43 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 01:02:09 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	ft_free_list(t_list **root)
+{
+	
+}
 // never create stack b here
 // create it in the sorting functions and free it there
 int	main(int argc, char *argv[])
