@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/16 21:19:03 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/16 21:29:39 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct s_info
 
 // linked_list functions
 t_list				*ft_create_node(int content);
+void				ft_insert_back(t_list **root, int content);
 
 // info_utils functions
 t_info				*ft_create_info(t_list *root);
