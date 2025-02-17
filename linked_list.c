@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:00:57 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 12:38:38 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 22:42:17 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ void	ft_insert_back(t_list **root, int content)
 	{
 		ft_free_list(root);
 		exit(4);
+	}
+	if (*root == NULL || root == NULL)
+	{
+		*root = new;
+		return ;
 	}
 	curr = *root;
 	while (curr->next != NULL)
