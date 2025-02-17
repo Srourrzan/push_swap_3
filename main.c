@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:11:53 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 23:20:20 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 23:28:47 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 void	ft_fill_stack(t_list **root, char **argv)
 {
 	int		iter;
-	// int		integer_value;
+	int		integer_value;
 
-	// integer_value = 0;
+	integer_value = 0;
 	iter = 1;
 	while (argv[iter])
 	{
 		if (ft_is_number(argv[iter], root))
 		{
-			//integer_value = ft_atoi(argv[iter], root);
-			ft_insert_back(root, atoi(argv[iter]));
+			integer_value = ft_atoi(argv[iter], root);
+			ft_insert_back(root, integer_value);
 			iter++;	
 		}
 	}
