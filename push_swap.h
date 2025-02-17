@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/16 21:29:39 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 13:02:20 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -32,8 +33,12 @@ typedef struct s_info
 // linked_list functions
 t_list				*ft_create_node(int content);
 void				ft_insert_back(t_list **root, int content);
+void				ft_free_list(t_list **root);
 
 // info_utils functions
 t_info				*ft_create_info(t_list *root);
+
+// display_utils functions
+void				ft_display_stack(t_list **root, char name, int fd);
 
 #endif
