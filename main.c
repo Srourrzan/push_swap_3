@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:11:53 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 22:58:13 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 23:20:20 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,15 @@ void	ft_fill_stack(t_list **root, char **argv)
 	// int		integer_value;
 
 	// integer_value = 0;
-	iter = 0;
-	while(argv[iter])
-	{
-		printf("argv[%d] = %s\n", iter, argv[iter]);
-		iter++;
-	}
 	iter = 1;
 	while (argv[iter])
 	{
-		//integer_value = ft_atoi(argv[iter], root);
-		printf("filling %d\n", iter);
-		ft_insert_back(root, atoi(argv[iter]));
-		iter++;
+		if (ft_is_number(argv[iter], root))
+		{
+			//integer_value = ft_atoi(argv[iter], root);
+			ft_insert_back(root, atoi(argv[iter]));
+			iter++;	
+		}
 	}
 }
 
@@ -43,7 +39,6 @@ int	main(int argc, char *argv[])
 
 	if (argc == 1)
 		exit(1);
-	printf("argc = %d\n", argc);
 	root_a = NULL;
 	ft_fill_stack(&root_a, argv);
 	//a_info = ft_create_info(root_a);

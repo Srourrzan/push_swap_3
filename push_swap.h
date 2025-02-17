@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 21:38:44 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 23:15:46 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void				ft_putchar(char c, int fd);
 
 // std_utils functions
 int 				ft_atoi(char *src, t_list **root);
+int     			ft_is_number(char *src, t_list **root);
 
 #endif
