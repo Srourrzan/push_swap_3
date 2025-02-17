@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:17:26 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/16 21:17:28 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 01:00:20 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_info	*ft_create_info(t_list *root)
 	if (!new)
 	{
 		free(root);
+		ft_putstr("Error3\n", 2);
 		exit(3);
 	}
 	new->root = root;

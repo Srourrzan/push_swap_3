@@ -6,13 +6,13 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 21:33:12 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 23:22:15 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 01:19:40 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int     ft_atoi(char *src, t_list **root)
+int     ft_atoi(char *src, t_list **root, char **dup_num)
 {
     int     iter;
     int     number;
@@ -33,7 +33,8 @@ int     ft_atoi(char *src, t_list **root)
             || ((src[iter] - '0') > 8 && sign == -1))) || number >= 214748365)
             {
 				ft_free_list(root);
-				ft_putstr("Error\n", 2);
+                free(dup_num);
+				ft_putstr("Error1\n", 2);
 				exit(4);
 			}
         number = (number * 10) + (src[iter] - '0');
@@ -43,7 +44,7 @@ int     ft_atoi(char *src, t_list **root)
     return (number);
 }
 
-int     ft_is_number(char *src, t_list **root)
+int     ft_is_number(char *src, t_list **root, char **dup_num)
 {
     int     iter;
 
@@ -52,10 +53,12 @@ int     ft_is_number(char *src, t_list **root)
         iter++;
     while(src[iter])
     {
-        if (src[iter] <= '0' || src[iter] >= '9')
+        if (src[iter] < '0' || src[iter] > '9')
         {
+            printf("src[%d] = %c\n", iter, src[iter]);
             ft_free_list(root);
-            ft_putstr("Error\n", 2);
+            free(dup_num);
+            ft_putstr("Error2\n", 2);
             exit(5);
         }
         iter++;
