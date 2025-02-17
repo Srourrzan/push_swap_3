@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 10:14:19 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 15:46:47 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 16:06:24 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_putnbr(int nbr, int fd)
 {
 	char	res;
 
+	res = 0;
 	if (nbr < 0)
 	{
 		if (nbr == -2147483648)
@@ -44,7 +45,7 @@ void	ft_display_stack(t_list **root, char name, int fd)
 		curr = curr->next;
 	}
 	ft_putstr("_\n", fd);
-	ft_putstr(&name, fd);
+	ft_putchar(name, fd);
 	ft_putstr("\n", fd);
 }
 
@@ -60,6 +61,10 @@ void	ft_putstr(char *src, int fd)
 	}
 }
 
+void	ft_putchar(char c, int fd)
+{
+	write(fd, &c, 1);
+}
 // void	ft_display_stacks(t_list **a, t_list **b, int fd)
 // {
 // 	t_list	*curr_a;

@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 15:44:47 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 16:05:39 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ t_info				*ft_create_info(t_list *root);
 void				ft_display_stack(t_list **root, char name, int fd);
 void				ft_putstr(char *src, int fd);
 void				ft_putnbr(int nbr, int fd);
+void				ft_putchar(char c, int fd);
 
 #endif
