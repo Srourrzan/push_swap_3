@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:00:57 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/16 21:34:48 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 12:38:38 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,26 @@ void	ft_insert_back(t_list **root, int content)
 	new = ft_create_node(content);
 	if (!new)
 	{
-		free(*root); // create a function to free all the list
+		ft_free_list(root);
 		exit(4);
 	}
 	curr = *root;
 	while (curr->next != NULL)
 		curr = curr->next;
 	curr->next = new;
+}
+
+void	ft_free_list(t_list **root)
+{
+	t_list		*curr;
+	t_list		*prev_node;
+
+	curr = *root;
+	while(curr)
+	{
+		prev_node = curr;
+		curr = curr->next;
+		free(prev_node);
+	}
+	*root = NULL;
 }
