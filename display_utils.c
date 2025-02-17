@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 10:14:19 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 13:01:49 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/17 15:46:47 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr(int nbr, int fd)
 			ft_putstr("-2147483648", fd);
 			return ;
 		}
-		ft_putatr("-", fd);
+		ft_putstr("-", fd);
 		nbr *= -1;
 	}
 	if (nbr > 9)
@@ -43,7 +43,9 @@ void	ft_display_stack(t_list **root, char name, int fd)
 		ft_putstr("\n", fd);
 		curr = curr->next;
 	}
-	ft_putstr("_\nname\n", fd);
+	ft_putstr("_\n", fd);
+	ft_putstr(&name, fd);
+	ft_putstr("\n", fd);
 }
 
 void	ft_putstr(char *src, int fd)
