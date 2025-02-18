@@ -100,7 +100,7 @@ void	ft_putchar(char c, int fd)
 // 	int		iter;
 // 	static int		snumber;
 // 	int		number;
-	
+
 // 	len = 0;
 // 	iter = 0;
 // 	number = node->content;

@@ -51,11 +51,11 @@ void	ft_insert_back(t_list **root, int content, char **dup_num)
 
 void	ft_free_list(t_list **root)
 {
-	t_list		*curr;
-	t_list		*prev_node;
+	t_list	*curr;
+	t_list	*prev_node;
 
 	curr = *root;
-	while(curr)
+	while (curr)
 	{
 		prev_node = curr;
 		curr = curr->next;

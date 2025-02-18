@@ -45,8 +45,8 @@ void				ft_putnbr(int nbr, int fd);
 void				ft_putchar(char c, int fd);
 
 // std_utils functions
-int 				ft_atoi(char *src, t_list **root, char **dup_num);
-int     			ft_is_number(char *src, t_list **root, char **dup_num);
-int     			ft_strcmp(const char *s1, const char *s2);
+int					ft_atoi(char *src, t_list **root, char **dup_num);
+int					ft_is_number(char *src, t_list **root, char **dup_num);
+int					ft_strcmp(const char *s1, const char *s2);
 
 #endif
