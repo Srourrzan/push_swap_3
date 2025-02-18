@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 18:44:51 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 19:56:13 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void				ft_putchar(char c, int fd);
 int					ft_atoi(char *src, t_list **root);
 int					ft_is_number(char *src, t_list **root);
 
-//stack_utils function 
+// stack_utils function
 void				ft_fill_stack(t_list **root, char **argv);
+void				ft_is_dup(t_list **root);
 
 #endif
