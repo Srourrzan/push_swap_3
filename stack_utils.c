@@ -6,30 +6,27 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:35:09 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 15:28:06 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 19:52:09 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_is_dup(char **dup_num, char *s_number, t_list **root)
+void	ft_fill_stack(t_list **root, char **argv)
 {
-	int	iter;
-	int	cmp;
+	int		iter;
+	int		integer_value;
 
-	iter = 0;
-	cmp = 0;
-	while (dup_num[iter])
+	integer_value = 0;
+	iter = 1;
+	while (argv[iter])
 	{
-		cmp = ft_strcmp(dup_num[iter], s_number);
-		if (cmp == 0)
+		if (ft_is_number(argv[iter], root))
 		{
-			ft_free_list(root);
-			free(dup_num);
-			ft_putstr("Error6\n", 2);
-			exit(6);
+			integer_value = ft_atoi(argv[iter], root);
+			ft_insert_back(root, integer_value);
+			iter++;	
 		}
-		iter++;
 	}
-	return (0);
+	ft_is_dup(root);
 }

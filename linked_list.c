@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:00:57 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 01:22:51 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 18:41:18 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_create_node(int content)
 	return (new);
 }
 
-void	ft_insert_back(t_list **root, int content, char **dup_num)
+void	ft_insert_back(t_list **root, int content)
 {
 	t_list	*new;
 	t_list	*curr;
@@ -34,7 +34,6 @@ void	ft_insert_back(t_list **root, int content, char **dup_num)
 	if (new == NULL)
 	{
 		ft_free_list(root);
-		free(dup_num);
 		ft_putstr("Error4\n", 2);
 		exit(4);
 	}

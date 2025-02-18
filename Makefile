@@ -1,7 +1,7 @@
 # -*- MakeFile -*-
 
 TARGET = push_swap
-SRCS = main.c linked_list.c info_utils.c display_utils.c std_utils.c
+SRCS = main.c linked_list.c info_utils.c display_utils.c std_utils.c stack_utils.c
 OBJ_DIR = obj
 
 OBJS = $(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
