@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 19:56:13 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 20:24:06 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void				ft_putchar(char c, int fd);
 // std_utils functions
 int					ft_atoi(char *src, t_list **root);
 int					ft_is_number(char *src, t_list **root);
+void				ft_clean_and_exit(t_list **root_a, t_list **root_b,
+						t_info *info, int num);
 
 // stack_utils function
 void				ft_fill_stack(t_list **root, char **argv);

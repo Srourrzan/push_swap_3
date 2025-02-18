@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 10:14:19 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/17 21:48:01 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 20:08:16 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,62 +65,3 @@ void	ft_putchar(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-// void	ft_display_stacks(t_list **a, t_list **b, int fd)
-// {
-// 	t_list	*curr_a;
-// 	t_list	*curr_b;
-// 	t_list	*temp;
-
-// 	curr_a = *a;
-// 	curr_b = *b;
-// 	temp = curr_a;
-// 	while (curr_a != NULL || curr_b != NULL)
-// 	{
-// 		if (curr_a)
-// 		{
-// 			ft_putnbr(curr_a->content, fd);
-// 			temp = curr_a;
-// 			curr_a = curr_a->next;
-// 		}
-// 		ft_correct_space_display(temp, fd);
-// 		if (curr_b)
-// 		{
-// 			ft_putnbr(curr_b->content, fd);
-// 			curr_b = curr_b->next;
-// 		}
-// 		ft_putstr("\n", fd);
-// 	}
-// 	ft_putstr("___________   ___________\n", fd);
-// 	ft_putstr("a             b\n", fd);
-// }
-
-// void	ft_correct_space_display(t_list *node, int fd)
-// {
-// 	int		len;
-// 	int		iter;
-// 	static int		snumber;
-// 	int		number;
-
-// 	len = 0;
-// 	iter = 0;
-// 	number = node->content;
-// 	if (snumber != node->content || (node->next != NULL))
-// 	{
-// 		snumber = number;
-// 		if (number < 0)
-// 		{
-// 			number = number * -1;
-// 			len++;
-// 		}
-// 		while (number > 0)
-// 		{
-// 			number /= 10;
-// 			len++;
-// 		}
-// 	}
-// 	while (iter < (13 - len))
-// 	{
-// 		ft_putstr(" ", fd);
-// 		iter++;
-// 	}
-// }

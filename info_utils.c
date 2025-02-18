@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:17:26 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 01:00:20 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 20:32:38 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,7 @@ t_info	*ft_create_info(t_list *root)
 
 	new = malloc(sizeof(t_info));
 	if (!new)
-	{
-		free(root);
-		ft_putstr("Error3\n", 2);
-		exit(3);
-	}
+		ft_clean_and_exit(root, NULL, NULL, 3);
 	new->root = root;
 	new->size = 1;
 	return (new);

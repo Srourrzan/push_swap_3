@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:35:09 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 19:55:51 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/18 20:28:57 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,16 @@ void	ft_is_dup(t_list **root)
 	t_list	*temp1;
 	t_list	*temp2;
 
+	if (!root || !*root)
+		return ;
 	temp1 = *root;
-	temp2 = *root;
 	while (temp1 != NULL)
 	{
+		temp2 = temp1->next;
 		while (temp2 != NULL)
 		{
 			if (temp1->content == temp2->content)
-			{
-				ft_free_list(root);
-				ft_putstr("Error7\n", 2);
-				exit(7);
-			}
+				ft_clean_and_exit(root, NULL, NULL, 7);
 			temp2 = temp2->next;
 		}
 		temp1 = temp1->next;
