@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/19 19:51:36 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/19 20:04:12 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ void				ft_putstr(char *src, int fd);
 void				ft_putnbr(int nbr, int fd);
 void				ft_putchar(char c, int fd);
 
-// std_utils functions
+//std_utils functions
 int					ft_atoi(char *src, t_list **root);
 int					ft_is_number(char *src, t_list **root);
 void				ft_clean_and_exit(t_list **root_a, t_list **root_b,
 						t_info *info, int num);
 
-// stack_utils function
+//stack_utils function
 void				ft_fill_stack(t_list **root, char **argv);
 void				ft_is_dup(t_list **root);
 
@@ -62,5 +62,9 @@ void				ft_sort_list(t_info *a_info, t_list **b);
 void	push(t_list **src_list, t_list **dst_list);
 void 	ft_ascend_push(t_list **a, t_list **b, int fd);
 void		ft_descend_push(t_list **a, t_list **b, int fd);
+
+// swap_utils.c
+void	swap(t_list **root);
+void	ss(t_list **root_a, t_list **root_b);
 
 #endif
