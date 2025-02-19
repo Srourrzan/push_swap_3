@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/19 20:04:12 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/19 21:55:54 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_info
 t_list				*ft_create_node(int content);
 void				ft_insert_back(t_list **root, int content);
 void				ft_free_list(t_list **root);
+int		len_list(t_list **root);
 
 // info_utils functions
 t_info				*ft_create_info(t_list *root);
@@ -64,7 +65,7 @@ void 	ft_ascend_push(t_list **a, t_list **b, int fd);
 void		ft_descend_push(t_list **a, t_list **b, int fd);
 
 // swap_utils.c
-void	swap(t_list **root);
-void	ss(t_list **root_a, t_list **root_b);
+void	swap(t_info *a_info);
+//void	ss(t_list *root_a, t_list *root_b);
 
 #endif

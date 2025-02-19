@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:00:57 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 20:07:31 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/19 20:09:36 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,21 @@ void	ft_free_list(t_list **root)
 		free(prev_node);
 	}
 	*root = NULL;
+}
+
+int		len_list(t_list **root)
+{
+	int		len;
+	t_list		*curr;
+
+	len = 0;
+	if (!root || !(*root))
+		return (0);
+	curr = *root;
+	while(curr)
+	{
+		curr = curr->next;
+		len++;
+	}
+	return (len);
 }
