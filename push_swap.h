@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/18 20:24:06 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/19 19:51:36 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,14 @@ void				ft_clean_and_exit(t_list **root_a, t_list **root_b,
 // stack_utils function
 void				ft_fill_stack(t_list **root, char **argv);
 void				ft_is_dup(t_list **root);
+
+//sort_utils.c function
+int					ft_ascend_check(t_list **a);
+void				ft_sort_list(t_info *a_info, t_list **b);
+
+//push_util.c function
+void	push(t_list **src_list, t_list **dst_list);
+void 	ft_ascend_push(t_list **a, t_list **b, int fd);
+void		ft_descend_push(t_list **a, t_list **b, int fd);
 
 #endif
