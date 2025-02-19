@@ -6,29 +6,35 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:38:22 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/19 21:58:11 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 01:22:27 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_sort_two(t_info *a_info)
+void    ft_sort_two(t_list **a)
 {
-    swap(a_info);
+    swap(a);
     ft_putstr("sa\n", 1);
 }
 
-void    ft_three_sort(t_info *a_info)
+void    ft_three_sort(t_list **a, int size)
 {
-    ft_sort_two(a_info);
+	if (size == 2)
+    	ft_sort_two(a);
+	
 }
 
-void	ft_sort_list(t_info *a_info, t_list **b)
+void	ft_sort_list(t_list **a, t_list **b)
 {
-	if (!ft_ascend_check(&(a_info->root)))
+	int		size;
+
+	size = 0;
+	if (!ft_ascend_check(a))
 	{
-		if (a_info->size <= 3)
-			ft_three_sort(a_info);
+		size = len_list(a);
+		if (size <= 3)
+			ft_three_sort(a, size);
         ft_putstr("\n", 1);
         ft_display_stack(b, 'b', 1);
 		// else if (a_info->size <= 5)

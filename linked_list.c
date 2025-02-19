@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 21:00:57 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/19 20:09:36 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 01:14:02 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_insert_back(t_list **root, int content)
 
 	new = ft_create_node(content);
 	if (new == NULL)
-		ft_clean_and_exit(root, NULL, NULL, 4);
+		ft_clean_and_exit(root, NULL, 4);
 	if (*root == NULL || root == NULL)
 	{
 		*root = new;
