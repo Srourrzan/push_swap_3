@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:38:22 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 01:22:27 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 01:38:46 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,54 @@ void    ft_sort_two(t_list **a)
     ft_putstr("sa\n", 1);
 }
 
+void    ft_three_stack_conditions(t_list **a, int n1, int n2, int n3)
+{
+    if (n1 < n2 && n2 > n3)
+    {
+        reverse_rotate(a);
+        ft_putstr("rra\n", 1);
+        if (n1 < n3)
+        {
+            swap(a);
+            ft_putstr("sa\n", 1);
+        }
+    }
+    else if (n1 > n2 && n1 > n3)
+    {
+        rotate(a);
+        ft_putstr("ra\n", 1);
+        if (n2 > n3)
+        {
+            swap(a);
+            ft_putstr("sa\n", 1);   
+        }
+    }
+    else if (n1 > n2 && n1 < n3)
+    {
+        swap(a);
+        ft_putstr("sa\n", 1);  
+    }
+}
+
 void    ft_three_sort(t_list **a, int size)
 {
+	int		first;
+	int		second;
+	int		third;
+	
+	first = 0;
+	second = 0;
+	third = 0;
 	if (size == 2)
     	ft_sort_two(a);
-	
+	else
+	{
+        first = (*a)->content;
+        second = (*a)->next->content;
+        third = (*a)->next->next->content;
+        ft_putstr("defined\n", 1);
+        ft_three_stack_conditions(a, first, second, third);
+	}
 }
 
 void	ft_sort_list(t_list **a, t_list **b)
@@ -35,10 +78,8 @@ void	ft_sort_list(t_list **a, t_list **b)
 		size = len_list(a);
 		if (size <= 3)
 			ft_three_sort(a, size);
-        ft_putstr("\n", 1);
-        ft_display_stack(b, 'b', 1);
-		// else if (a_info->size <= 5)
-		// 	ft_five_sort(a_info, b);
+		// else if (size <= 5)
+		// 	ft_five_sort(a, b);
 		// else
 		// 	ft_large_sort(a_info, b);
 	}

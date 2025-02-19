@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 01:20:18 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 01:33:48 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,14 @@ void	push(t_list **src_list, t_list **dst_list);
 void 	ft_ascend_push(t_list **a, t_list **b, int fd);
 void		ft_descend_push(t_list **a, t_list **b, int fd);
 
-// swap_utils.c
+// swap_utils.c functions
 void	swap(t_list **root);
 void	ss(t_list **root_a, t_list **root_b);
+
+// rotate_util.c functions
+void	rotate(t_list **root);
+void	rr(t_list **root_a, t_list **root_b);
+void	reverse_rotate(t_list **root);
+void	rrr(t_list **root_a, t_list **root_b);
 
 #endif
