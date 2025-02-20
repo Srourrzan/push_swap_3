@@ -59,16 +59,16 @@ void	ft_free_list(t_list **root)
 	*root = NULL;
 }
 
-int		len_list(t_list **root)
+int	len_list(t_list **root)
 {
 	int		len;
-	t_list		*curr;
+	t_list	*curr;
 
 	len = 0;
 	if (!root || !(*root))
 		return (0);
 	curr = *root;
-	while(curr)
+	while (curr)
 	{
 		curr = curr->next;
 		len++;

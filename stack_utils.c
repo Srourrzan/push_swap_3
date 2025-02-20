@@ -52,9 +52,9 @@ void	ft_is_dup(t_list **root)
 	}
 }
 
-int		ft_find_min_index(t_list **root)
+int	ft_find_min_index(t_list **root)
 {
-	t_list *curr;
+	t_list	*curr;
 	int		min;
 	int		index;
 	int		iter;
@@ -63,7 +63,7 @@ int		ft_find_min_index(t_list **root)
 	min = curr->content;
 	index = 0;
 	iter = 0;
-	while(curr != NULL)
+	while (curr != NULL)
 	{
 		if (curr->content < min)
 		{
@@ -78,10 +78,10 @@ int		ft_find_min_index(t_list **root)
 
 void	ft_move_min_to_top(t_list **root, int size)
 {
-	int		index;
+	int	index;
 
 	index = ft_find_min_index(root);
-	while(index > 0)
+	while (index > 0)
 	{
 		if (index <= size / 2)
 		{
