@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 17:21:43 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 17:31:51 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void				ft_three_sort(t_list **a, int size);
 void				ft_five_sort(t_list **a, t_list **b, int size);
 
 // large_sort functions
-void				ft_large_sort(t_list **a, t_list **b);
+void				ft_large_sort(t_list **a, t_list **b, int size);
 void				ft_assign_index(t_list **root);
 
 #endif

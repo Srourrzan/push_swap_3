@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 07:04:11 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 17:27:23 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 17:32:07 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,11 @@ void	ft_assign_index(t_list **root)
 	}
 }
 
-void	ft_large_sort(t_list **a, t_list **b)
+void	ft_large_sort(t_list **a, t_list **b, int size)
 {
-	t_list	*curr;
+	int     max_index;
 
 	ft_assign_index(a);
+    max_index = size - 1;  
 	ft_display_stack(b, 'b', 1);
-	curr = *a;
-	while (curr)
-	{
-		curr = curr->next;
-	}
 }
