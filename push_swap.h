@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 10:36:20 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 10:46:54 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void				ft_clean_and_exit(t_list **root_a, t_list **root_b, int num);
 //stack_utils function
 void				ft_fill_stack(t_list **root, char **argv);
 void				ft_is_dup(t_list **root);
+int					ft_find_min_index(t_list **root);
+void	ft_move_min_to_top(t_list **root, int size);
 
 //sort_utils.c function
 int					ft_ascend_check(t_list **a);
@@ -68,5 +70,6 @@ void	rrr(t_list **root_a, t_list **root_b);
 void    ft_sort_two(t_list **a);
 void    ft_three_stack_conditions(t_list **a, int n1, int n2, int n3);
 void    ft_three_sort(t_list **a, int size);
+void   ft_five_sort(t_list **a, t_list **b, int size);
 
 #endif

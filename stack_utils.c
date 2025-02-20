@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:35:09 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 01:15:01 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 10:44:07 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,36 @@ void	ft_is_dup(t_list **root)
 		}
 		temp1 = temp1->next;
 	}
+}
+
+int		ft_find_min_index(t_list **root)
+{
+	t_list *curr;
+	int		min;
+	int		index;
+	int		iter;
+
+	curr = *root;
+	min = curr->content;
+	index = 0;
+	iter = 0;
+	while(curr != NULL)
+	{
+		if (curr->content < min)
+		{
+			min = curr->content;
+			index = iter;
+		}
+		iter++;
+		curr = curr->next;
+	}
+	return (index);
+}
+
+void	ft_move_min_to_top(t_list **root, int size)
+{
+	int		index;
+
+	index = ft_find_min_index(root);
+	printf("index min = %d, size = %d\n", index, size);
 }

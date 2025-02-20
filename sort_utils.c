@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:38:22 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 10:34:36 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 10:46:21 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_sort_list(t_list **a, t_list **b)
 		if (size <= 3)
 			ft_three_sort(a, size);
 		else if (size <= 5)
-			ft_five_sort(a, b);
+			ft_five_sort(a, b, size);
 		// else
 		// 	ft_large_sort(a_info, b);
 	}
