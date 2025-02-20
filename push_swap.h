@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 01:33:48 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 10:36:20 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,10 @@ void	rotate(t_list **root);
 void	rr(t_list **root_a, t_list **root_b);
 void	reverse_rotate(t_list **root);
 void	rrr(t_list **root_a, t_list **root_b);
+
+//small_sort functions
+void    ft_sort_two(t_list **a);
+void    ft_three_stack_conditions(t_list **a, int n1, int n2, int n3);
+void    ft_three_sort(t_list **a, int size);
 
 #endif

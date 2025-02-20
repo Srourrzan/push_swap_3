@@ -6,66 +6,11 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:38:22 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 10:28:37 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 10:34:36 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void    ft_sort_two(t_list **a)
-{
-    swap(a);
-    ft_putstr("sa\n", 1);
-}
-
-void    ft_three_stack_conditions(t_list **a, int n1, int n2, int n3)
-{
-    if (n1 < n2 && n2 > n3)
-    {
-        reverse_rotate(a);
-        ft_putstr("rra\n", 1);
-        if (n1 < n3)
-        {
-            swap(a);
-            ft_putstr("sa\n", 1);
-        }
-    }
-    else if (n1 > n2 && n1 > n3)
-    {
-        rotate(a);
-        ft_putstr("ra\n", 1);
-        if (n2 > n3)
-        {
-            swap(a);
-            ft_putstr("sa\n", 1);   
-        }
-    }
-    else if (n1 > n2 && n1 < n3)
-    {
-        swap(a);
-        ft_putstr("sa\n", 1);  
-    }
-}
-
-void    ft_three_sort(t_list **a, int size)
-{
-	int		first;
-	int		second;
-	int		third;
-	
-	first = 0;
-	second = 0;
-	third = 0;
-	if (size == 2)
-    	ft_sort_two(a);
-	else
-	{
-        first = (*a)->content;
-        second = (*a)->next->content;
-        third = (*a)->next->next->content;
-        ft_three_stack_conditions(a, first, second, third);
-	}
-}
 
 void	ft_sort_list(t_list **a, t_list **b)
 {
