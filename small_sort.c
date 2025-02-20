@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:02:00 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 10:48:18 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 13:05:19 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,13 @@ void    ft_three_sort(t_list **a, int size)
 
 void   ft_five_sort(t_list **a, t_list **b, int size)
 {
-    ft_move_min_to_top(a, size);
-    if (*b)
-        ft_display_stack(b, 'b', 1);
+    while (size > 3)
+    {
+        ft_move_min_to_top(a, size);
+        ft_ascend_push(a, b, 1);
+        size = len_list(a);
+    }
+    ft_three_sort(a, size);
+    while(*b)
+        ft_descend_push(a, b, 1);
 }
