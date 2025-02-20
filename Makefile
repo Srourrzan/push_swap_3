@@ -1,7 +1,7 @@
 # -*- MakeFile -*-
 
 TARGET = push_swap
-SRCS = main.c linked_list.c info_utils.c display_utils.c std_utils.c stack_utils.c \
+SRCS = main.c linked_list.c display_utils.c std_utils.c stack_utils.c \
 		push_util.c swap_utils.c sort_utils.c rotate_util.c small_sort.c large_sort.c
 OBJ_DIR = obj
 
