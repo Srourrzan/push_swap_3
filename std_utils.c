@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 21:33:12 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 01:15:18 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 18:02:09 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,6 @@ void	ft_clean_and_exit(t_list **root_a, t_list **root_b, int num)
 		ft_free_list(root_a);
 	if (root_b)
 		ft_free_list(root_b);
-	ft_putstr("Error_", 2);
-	ft_putnbr(num, 2);
-	ft_putstr("\n", 2);
+	ft_putstr("Error\n", 2);
 	exit(num);
 }
