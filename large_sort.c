@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 07:04:11 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 17:21:26 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 17:27:23 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	ft_large_sort(t_list **a, t_list **b)
 	curr = *a;
 	while (curr)
 	{
-		printf("%d: %d\n", curr->content, curr->index);
 		curr = curr->next;
 	}
 }

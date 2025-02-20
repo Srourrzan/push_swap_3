@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:11:53 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 17:23:52 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 17:26:44 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	main(int argc, char *argv[])
 	ft_fill_stack(&root_a, argv);
 	ft_display_stack(&root_a, 'a', 1);
 	size = len_list(&root_a);
-	printf("a size = %d\n", size);
 	ft_sort_list(&root_a, &root_b);
 	ft_display_stack(&root_a, 'a', 1);
 	ft_free_list(&root_a);
