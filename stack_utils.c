@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:35:09 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 10:44:07 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 12:59:43 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,18 @@ void	ft_move_min_to_top(t_list **root, int size)
 	int		index;
 
 	index = ft_find_min_index(root);
-	printf("index min = %d, size = %d\n", index, size);
+	while(index > 0)
+	{
+		if (index <= size / 2)
+		{
+			rotate(root);
+			ft_putstr("ra\n", 1);
+		}
+		else
+		{
+			reverse_rotate(root);
+			ft_putstr("ra\n", 1);
+		}
+		index = ft_find_min_index(root);
+	}
 }
