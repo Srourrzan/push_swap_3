@@ -6,7 +6,7 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 20:49:47 by rsrour            #+#    #+#             */
-/*   Updated: 2025/02/20 10:46:54 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/02/20 17:21:43 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_list
 t_list				*ft_create_node(int content);
 void				ft_insert_back(t_list **root, int content);
 void				ft_free_list(t_list **root);
-int		len_list(t_list **root);
+int					len_list(t_list **root);
 
 // display_utils functions
 void				ft_display_stack(t_list **root, char name, int fd);
@@ -36,40 +36,46 @@ void				ft_putstr(char *src, int fd);
 void				ft_putnbr(int nbr, int fd);
 void				ft_putchar(char c, int fd);
 
-//std_utils functions
+// std_utils functions
 int					ft_atoi(char *src, t_list **root);
 int					ft_is_number(char *src, t_list **root);
-void				ft_clean_and_exit(t_list **root_a, t_list **root_b, int num);
+void				ft_clean_and_exit(t_list **root_a, t_list **root_b,
+						int num);
 
-//stack_utils function
+// stack_utils function
 void				ft_fill_stack(t_list **root, char **argv);
 void				ft_is_dup(t_list **root);
 int					ft_find_min_index(t_list **root);
-void	ft_move_min_to_top(t_list **root, int size);
+void				ft_move_min_to_top(t_list **root, int size);
 
-//sort_utils.c function
+// sort_utils.c function
 int					ft_ascend_check(t_list **a);
 void				ft_sort_list(t_list **a, t_list **b);
 
-//push_util.c function
-void	push(t_list **src_list, t_list **dst_list);
-void 	ft_ascend_push(t_list **a, t_list **b, int fd);
-void		ft_descend_push(t_list **a, t_list **b, int fd);
+// push_util.c function
+void				push(t_list **src_list, t_list **dst_list);
+void				ft_ascend_push(t_list **a, t_list **b, int fd);
+void				ft_descend_push(t_list **a, t_list **b, int fd);
 
 // swap_utils.c functions
-void	swap(t_list **root);
-void	ss(t_list **root_a, t_list **root_b);
+void				swap(t_list **root);
+void				ss(t_list **root_a, t_list **root_b);
 
 // rotate_util.c functions
-void	rotate(t_list **root);
-void	rr(t_list **root_a, t_list **root_b);
-void	reverse_rotate(t_list **root);
-void	rrr(t_list **root_a, t_list **root_b);
+void				rotate(t_list **root);
+void				rr(t_list **root_a, t_list **root_b);
+void				reverse_rotate(t_list **root);
+void				rrr(t_list **root_a, t_list **root_b);
 
-//small_sort functions
-void    ft_sort_two(t_list **a);
-void    ft_three_stack_conditions(t_list **a, int n1, int n2, int n3);
-void    ft_three_sort(t_list **a, int size);
-void   ft_five_sort(t_list **a, t_list **b, int size);
+// small_sort functions
+void				ft_sort_two(t_list **a);
+void				ft_three_stack_conditions(t_list **a, int n1, int n2,
+						int n3);
+void				ft_three_sort(t_list **a, int size);
+void				ft_five_sort(t_list **a, t_list **b, int size);
+
+// large_sort functions
+void				ft_large_sort(t_list **a, t_list **b);
+void				ft_assign_index(t_list **root);
 
 #endif
